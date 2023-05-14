@@ -1,4 +1,5 @@
 import sys
+from mergetest import mergesort
 
 arg = sys.argv              #list of cmd-line arguments
 alg = arg[1]
@@ -16,11 +17,11 @@ for i in list:
     unsorted.append([i[:-(len(i) - i.index(" "))], i[i.index(" ") + 1:]])                                   #erzeugt 2 dimensionale Liste mit vornamen und namen
     
 sorted = []
-if arg[1] is "-mergesort":
-    #sorted = mergesort(unsorted)
-    pass
-elif arg[1] is "-quicksort":
+if arg[1] == "-mergesort":
+    sorted = mergesort(unsorted)
+elif arg[1] == "-quicksort":
     #sorted = quicksort(unsorted)
     pass
 
 
+print(sorted)

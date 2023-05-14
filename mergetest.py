@@ -1,26 +1,3 @@
-unsorted = []
-
-
-def oeffne(datei: str):
-    with open(datei) as file:
-        lines = file.readlines()
-    unsorted = [line.strip() for line in lines]
-
-
-def converter(liste: list):
-    ergebnis = []
-    for x in liste:
-        vorname, nachname = x.split()
-        ergebnis.append(nachname + " " + vorname)
-    return ergebnis
-
-
-def mergesortwrap(liste: list):
-    liste = converter(liste)
-    ergebnis = mergesort(liste)
-    return converter(ergebnis)
-
-
 def mergesort(liste: list):
     if len(liste) <= 1:
         return liste
@@ -63,10 +40,3 @@ def merge(lliste: list, rliste: list):
         ergebnis.append(rliste[0])
         rliste.pop(0)
     return ergebnis
-
-
-open("a0020.txt")
-result = mergesortwrap(unsorted)
-for x in result:
-    print(x)
-print(unsorted)
