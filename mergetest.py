@@ -42,12 +42,20 @@ def mergesort(liste: list):
 def merge(lliste: list, rliste: list):
     ergebnis = []
     while len(lliste) != 0 and len(rliste) != 0:
-        if lliste[0] <= rliste[0]:
-            ergebnis.append(lliste[0])
-            lliste.pop(0)
+        if lliste[0][1] is not rliste[0][1]:
+            if lliste[0][1] <= rliste[0][1]:
+                ergebnis.append(lliste[0])
+                lliste.pop(0)
+            else:
+                ergebnis.append(rliste[0])
+                rliste.pop(0)
         else:
-            ergebnis.append(rliste[0])
-            rliste.pop(0)
+            if lliste[0][0] <= rliste[0][0]:
+                ergebnis.append(lliste[0])
+                lliste.pop(0)
+            else:
+                ergebnis.append(rliste[0])
+                rliste.pop(0)
     while len(lliste) != 0:
         ergebnis.append(lliste[0])
         lliste.pop(0)
