@@ -29,7 +29,7 @@ for i in sorted:
     s = "{p1}{p2} {p3}\n".format(p1=s, p2=i[0], p3=i[1])
 
 #print(sorted)
-print(s)
+print(s[:-1])
 
 if sorted == compareData("{p1}.sol".format(p1 = arg[2])):
     print(True)
