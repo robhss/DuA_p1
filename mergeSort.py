@@ -1,6 +1,7 @@
 def mergesort(liste: list):
     if len(liste) <= 1:
         return liste
+    
     else:
         index = 0
         lliste = []
@@ -13,11 +14,13 @@ def mergesort(liste: list):
 
         lliste = mergesort(lliste)
         rliste = mergesort(rliste)
+
         return merge(lliste, rliste)
 
 
 def merge(lliste: list, rliste: list):
     ergebnis = []
+
     while len(lliste) != 0 and len(rliste) != 0:
         if lliste[0][1] != rliste[0][1]:
             if lliste[0][1] <= rliste[0][1]:
@@ -33,10 +36,13 @@ def merge(lliste: list, rliste: list):
             else:
                 ergebnis.append(rliste[0])
                 rliste.pop(0)
+
     while len(lliste) != 0:
         ergebnis.append(lliste[0])
         lliste.pop(0)
+
     while len(rliste) != 0:
         ergebnis.append(rliste[0])
         rliste.pop(0)
+
     return ergebnis
