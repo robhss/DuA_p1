@@ -12,9 +12,17 @@ with open(fr"{arg[2]}",'r') as f:
 unsorted = []
 
 for i in list:
-    i = i[:-1]                            
-    unsorted.append([i[:-(len(i) - i.index(" "))], i[i.index(" ") + 1:]])                                   #erzeugt 2 dimensionale Liste mit vornamen und namen
-    
-print(unsorted)
+    if i is not " ":
+        i = i[:-1]                            
+        unsorted.append([i[:-(len(i) - i.index(" "))], i[i.index(" ") + 1:]])                                   #erzeugt 2 dimensionale Liste mit vornamen und namen
+
+sorted = []
+if arg[1] is "-mergesort":
+    #sorted = mergesort(unsorted)
+    pass
+elif arg[1] is "-quicksort":
+    #sorted = quicksort(unsorted)
+    pass
+
 
 
