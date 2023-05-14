@@ -28,12 +28,12 @@ def mergesort(liste: list):
         index = 0
         lliste = []
         rliste = []
-        while index < len(liste):
-            if index < len(liste) // 2:
-                lliste.append(liste[index])
-            if index >= len(liste) // 2:
-                rliste.append(liste[index])
-            index += 1
+
+        mid = len(liste)//2
+
+        lliste = liste[:mid]
+        rliste = liste[mid:]
+
         lliste = mergesort(lliste)
         rliste = mergesort(rliste)
         return merge(lliste, rliste)
