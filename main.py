@@ -1,5 +1,5 @@
 import sys
-from mergetest import mergesort
+from mergeSort import mergesort
 
 arg = sys.argv              #list of cmd-line arguments
 alg = arg[1]
