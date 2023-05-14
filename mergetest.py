@@ -1,6 +1,10 @@
-unsorted = ["ba b", "fadfa dedea", "fcdbf cd", "fdded abcab", "dbebc effdc", "abded effdc", "edbfb effdc",
-            "cdcdc effdc", "dcaaa daeeb", "adeca daeeb", "deac c", "fa f", "eabbd f", "fcdad ddcce", "ebffd bffbe",
-            "fcfea bffbe", "accc eebea", "fa eebea", "adaeb eebea", "bebfd d"]
+unsorted = []
+
+
+def oeffne(datei: str):
+    with open("a0020.txt") as file:
+        lines = file.readlines()
+    unsorted = [line.strip() for line in lines]
 
 
 def converter(liste: list):
@@ -27,7 +31,7 @@ def mergesort(liste: list):
         while index < len(liste):
             if index < len(liste) // 2:
                 lliste.append(liste[index])
-            if index > len(liste) // 2:
+            if index >= len(liste) // 2:
                 rliste.append(liste[index])
             index += 1
         lliste = mergesort(lliste)
@@ -56,4 +60,4 @@ def merge(lliste: list, rliste: list):
 result = mergesortwrap(unsorted)
 for x in result:
     print(x)
-#isst Daten?
+print(unsorted)
