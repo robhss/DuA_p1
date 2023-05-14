@@ -2,7 +2,7 @@ unsorted = []
 
 
 def oeffne(datei: str):
-    with open("a0020.txt") as file:
+    with open(datei) as file:
         lines = file.readlines()
     unsorted = [line.strip() for line in lines]
 
@@ -57,6 +57,7 @@ def merge(lliste: list, rliste: list):
     return ergebnis
 
 
+open("a0020.txt")
 result = mergesortwrap(unsorted)
 for x in result:
     print(x)
