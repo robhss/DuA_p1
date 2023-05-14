@@ -23,5 +23,9 @@ elif arg[1] == "-quicksort":
     #sorted = quicksort(unsorted)
     pass
 
+s = str
+for i in sorted:
 
-print(sorted)
+    s = "{p1}{p2} {p3}\n".format(p1 = s, p2 = i[0], p3 = i[1])
+
+print(s)
