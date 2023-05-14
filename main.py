@@ -8,5 +8,6 @@ with open(fr"{arg[2]}",'r') as f:
     list = f.readlines()
 
 for i in list:
+    i = i[:-1]
     print(i)
 
