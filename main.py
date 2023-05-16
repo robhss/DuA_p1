@@ -1,6 +1,7 @@
 import sys
 from mergeSort import mergesort
 from compare import compareData
+from quicktest import quicksort
 
 arg = sys.argv  # list of cmd-line arguments
 alg = arg[1]
@@ -21,7 +22,7 @@ sorted = []
 if arg[1] == "-mergesort":
     sorted = mergesort(unsorted)
 elif arg[1] == "-quicksort":
-    # sorted = quicksort(unsorted)
+    sorted = quicksort(unsorted)
     pass
 
 s = ''
@@ -33,5 +34,7 @@ print(s[:-1])
 
 if sorted == compareData("{p1}.sol".format(p1 = arg[2])):
     print(True)
+else:
+    print(False)
 
 #print(compareData("{p1}.sol".format(p1 = arg[2])))
