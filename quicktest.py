@@ -15,12 +15,15 @@ def teile(liste, links, rechts):
     while r < s:
         while r < s and liste[r]<=pivot:
             r+=1
+
         while s > r and liste[s] > pivot:
             s=s-1
+
         if liste[r] > liste[s]:
             temp=liste[r]
             liste[r]=liste[s]
             liste[s]=temp
+            
     if liste[r] > pivot:
         temp = liste[r]
         liste[r] = liste[rechts]

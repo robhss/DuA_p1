@@ -1,3 +1,6 @@
-Autor: rhess@mail.uni-paderborn.de 7285653 Heß Robin
+Autor: rhess@mail.uni-paderborn.de 7285653 Heß, Robin
+Autor: adaniel0@mail.uni-paderborn.de 7290279 Daniel, Adrian
+Autor: cbrix03@mail.uni-paderborn.de 7286005 Brix, Collin
+Autor: gkees@mail.uni-paderborn.de 7278521 Kees, Georg
 Compile:
 run: pyrhon3 main.py
