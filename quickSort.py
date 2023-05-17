@@ -1,5 +1,3 @@
-#import statistics
-
 def quicksort(l :list):
     quicksortHelper(l, 0, len(l) - 1)
     return l
@@ -12,13 +10,6 @@ def quicksortHelper(l : list, left: int, right: int):
         quicksortHelper(l, p + 1, right)
 
 def sort(l : list, left : int, right : int):
-
-    # pivot = statistics.median_high([
-    #     "{v} {n}".format(v = l[left][0], n = l[left][1]),
-    #     "{v} {n}".format(v = l[right / 2][0], n = l[right / 2][1]),
-    #     "{v} {n}".format(v = l[right][0], n = l[right][1])
-    # ]
-    # )
 
     pivot = l[right]
 
