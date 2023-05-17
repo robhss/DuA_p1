@@ -1,7 +1,7 @@
 import sys
 from mergeSort import mergesort
 from compare import compareData
-from quicktest import quicksort
+from quicktest2 import quicksort
 
 arg = sys.argv  # list of cmd-line arguments
 alg = arg[1]
