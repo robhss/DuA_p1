@@ -1,0 +1,3 @@
+Autor: rhess@mail.uni-paderborn.de 7285653 Heß Robin
+Compile:
+run: pyrhon3 main.py
