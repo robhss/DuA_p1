@@ -2,6 +2,8 @@ import sys
 from mergeSort import mergesort
 from quickSort import quicksort
 
+#sys.setrecursionlimit(10000)
+
 arg = sys.argv  # list of cmd-line arguments
 alg = arg[1]
 
@@ -13,6 +15,7 @@ unsorted = []
 
 for i in liste:
     i = i[:-1]
+    print(i)
     unsorted.append([i[:-(len(i) - i.index(" "))], i[i.index(" ") + 1:]])  # erzeugt 2 dimensionale Liste mit vornamen und namen
 
 sorted = []
